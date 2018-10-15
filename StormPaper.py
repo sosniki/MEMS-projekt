@@ -10,7 +10,8 @@ sense.show_message("Let's play!")
 
 
 f = [  0, 0, 0]
-b = [255, 0, 0]
+p = [255, 0, 0]
+b = [0, 0, 255]
 
 
 stone = [
@@ -85,57 +86,57 @@ def choose_symbolplayer1():
         
 stone2 = [
 f,f,f,f,f,f,f,f,
-f,f,p,b,b,b,f,f,
-f,b,b,b,b,b,b,f,
-b,b,b,b,b,b,b,b,
-b,b,b,b,b,b,b,b,
-f,b,b,b,b,b,b,f,
-f,f,b,b,b,b,f,f,
+f,f,p,p,p,p,f,f,
+f,p,p,p,p,p,p,f,
+p,p,p,p,p,p,p,p,
+p,p,p,p,p,p,p,p,
+f,p,p,p,p,p,p,f,
+f,f,p,p,p,p,f,f,
 f,f,f,f,f,f,f,f,
 ]
 
 paper2 = [
 f,f,f,f,f,f,f,f,
-f,p,b,b,b,b,b,f,
-f,b,b,b,b,b,b,f,
-f,b,b,b,b,b,b,f,
-f,b,b,b,b,b,b,f,
-f,b,b,b,b,b,b,f,
-f,b,b,b,b,b,b,f,
+f,p,p,p,p,p,p,f,
+f,p,p,p,p,p,p,f,
+f,p,p,p,p,p,p,f,
+f,p,p,p,p,p,p,f,
+f,p,p,p,p,p,p,f,
+f,p,p,p,p,p,p,f,
 f,f,f,f,f,f,f,f,
 ]
 
 scissors2 = [
-p,b,f,f,f,f,b,b,
-f,b,b,f,f,b,b,f,
-f,f,b,b,b,b,f,f,
-f,f,f,b,b,f,f,f,
-b,b,b,b,b,b,b,b,
-b,f,f,b,b,f,f,b,
-b,f,f,b,b,f,f,b,
-b,b,b,b,b,b,b,b,
+p,p,f,f,f,f,p,p,
+f,p,p,f,f,p,p,f,
+f,f,p,p,p,p,f,f,
+f,f,f,p,p,f,f,f,
+p,p,p,p,p,p,p,p,
+p,f,f,p,p,f,f,p,
+p,f,f,p,p,f,f,p,
+p,p,p,p,p,p,p,p,
 ]
 
 lizard2 = [
 f,f,f,f,f,f,f,f,
 f,f,f,f,f,f,f,f,
-f,b,b,b,b,b,b,f,
-b,f,f,f,f,f,f,f,
-b,f,f,f,f,f,f,f,
-f,b,b,b,b,b,b,f,
+f,p,p,p,p,p,p,f,
+p,f,f,f,f,f,f,f,
+p,f,f,f,f,f,f,f,
+f,p,p,p,p,p,p,f,
 f,f,f,f,f,f,f,f,
 f,f,f,f,f,f,f,f,
 ]
 
 spock2 = [
-p,b,f,f,f,f,b,b,
-f,b,b,f,f,b,b,f,
-f,f,b,b,b,b,f,f,
-b,b,b,b,b,b,b,b,
-b,b,b,b,b,b,b,b,
-f,b,b,b,b,b,b,f,
-f,f,b,b,b,b,f,f,
-f,f,b,b,b,b,f,f,
+p,p,f,f,f,f,p,p,
+f,p,p,f,f,p,p,f,
+f,f,p,p,p,,f,f,
+p,p,p,p,p,p,p,p,
+p,p,p,p,p,p,p,p,
+f,p,p,p,p,p,p,f,
+f,f,p,p,p,p,f,f,
+f,f,p,p,p,p,f,f,
 ]
 
 def choose_symbolplayer2():
