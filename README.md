@@ -1,2 +1,0 @@
-# MEMS-projekt
-Féléves feladat
