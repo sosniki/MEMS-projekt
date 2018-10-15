@@ -8,9 +8,9 @@ sense.clear()
 
 sense.show_message("Let's play!")
 
-b = [  0, 0, 255]
+
 f = [  0, 0, 0]
-p = [255, 0, 0]
+b = [255, 0, 0]
 
 
 stone = [
