@@ -75,13 +75,13 @@ def choose_symbolplayer1():
     if r == 1:
         sense.set_pixels(stone)
     elif r == 2:
-        sense.set_pixels(paper)
+        sense.set_pixels(spock)
     elif r == 3:
-        sense.set_pixels(scissors)
+        sense.set_pixels(paper)
     elif r == 4:
         sense.set_pixels(lizard)
     elif r == 5:
-        sense.set_pixels(spock)
+        sense.set_pixels(scissors)
 
         
 stone2 = [
@@ -144,13 +144,13 @@ def choose_symbolplayer2():
     if r2 == 1:
         sense.set_pixels(stone2)
     elif r2 == 2:
-        sense.set_pixels(paper2)
+        sense.set_pixels(spock2)
     elif r2 == 3:
-        sense.set_pixels(scissors2)
+        sense.set_pixels(paper2)
     elif r2 == 4:
         sense.set_pixels(lizard2)
     elif r2 == 5:
-        sense.set_pixels(spock2)
+        sense.set_pixels(scissors2)
 
 
 for i in range (2):
