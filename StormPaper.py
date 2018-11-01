@@ -131,7 +131,7 @@ f,f,f,f,f,f,f,f,
 spock2 = [
 p,p,f,f,f,f,p,p,
 f,p,p,f,f,p,p,f,
-f,f,p,p,p,,f,f,
+f,f,p,p,p,p,f,f,
 p,p,p,p,p,p,p,p,
 p,p,p,p,p,p,p,p,
 f,p,p,p,p,p,p,f,
@@ -153,17 +153,30 @@ def choose_symbolplayer2():
         sense.set_pixels(spock2)
 
 
-while True:
-    x, y, z = sense.get_accelerometer_raw().values()
+for i in range (2):
+     x, y, z = sense.get_accelerometer_raw().values()
 
-    x = abs(x)
-    y = abs(y)
-    z = abs(z)
+     x = abs(x)
+     y = abs(y)
+     z = abs(z)
+     
+    if i==0 and (x > 1.1 or y > 1.1 or z > 1.1):
 
-    if x > 1.1 or y > 1.1 or z > 1.1:
         choose_symbolplayer1()
         time.sleep(1)
-        sense.clear
+        sense.clear()
+        
+    elif i==1 and (x > 1.1 or y > 1.1 or z > 1.1):
         choose_symbolplayer2()
         time.sleep(1)
         sense.clear()
+      
+    if r % 5 == r2:
+       sense.show_message("Second player wins!")
+    elif (r + 1) % 5 == r2:
+        sense.show_message("Second player wins!")
+    elif r == r2:
+     sense.show_message("Players tie!")
+    else:
+       sense.show_message("First player wins!")
+    
