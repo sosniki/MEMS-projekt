@@ -174,9 +174,9 @@ for i in range (2):
     if r % 5 == r2:
        sense.show_message("Second player wins!")
     elif (r + 1) % 5 == r2:
-        sense.show_message("Second player wins!")
+       sense.show_message("Second player wins!")
     elif r == r2:
-     sense.show_message("Players tie!")
+       sense.show_message("Players tie!")
     else:
        sense.show_message("First player wins!")
     
