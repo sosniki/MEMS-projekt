@@ -162,20 +162,20 @@ for i in range (2):
      
     if i==0 and (x > 1.1 or y > 1.1 or z > 1.1):
 
-        choose_symbolplayer1()
+        s=choose_symbolplayer1()
         time.sleep(1)
         sense.clear()
         
     elif i==1 and (x > 1.1 or y > 1.1 or z > 1.1):
-        choose_symbolplayer2()
+        s2=choose_symbolplayer2()
         time.sleep(1)
         sense.clear()
       
-    if r % 5 == r2:
+    if s % 5 == s2:
        sense.show_message("Second player wins!")
-    elif (r + 1) % 5 == r2:
+    elif (s + 1) % 5 == s2:
        sense.show_message("Second player wins!")
-    elif r == r2:
+    elif s == s2:
        sense.show_message("Players tie!")
     else:
        sense.show_message("First player wins!")
