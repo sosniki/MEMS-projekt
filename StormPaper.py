@@ -72,8 +72,7 @@ while k<3:
     ]
 
 
-    def choose_symbolplayer1():
-        r = random.randint(1,5)
+    def choose_symbolplayer1(r):
         if r == 1:
             sense.set_pixels(stone)
         elif r == 2:
@@ -141,8 +140,7 @@ while k<3:
     f,f,p,p,p,p,f,f,
     ]
 
-    def choose_symbolplayer2():
-        r2 = random.randint(1,5)
+    def choose_symbolplayer2(r2):
         if r2 == 1:
             sense.set_pixels(stone2)
         elif r2 == 2:
@@ -153,7 +151,8 @@ while k<3:
             sense.set_pixels(lizard2)
         elif r2 == 5:
             sense.set_pixels(scissors2)
-
+    r = random.randint(1,5)
+    r2 = random.randint(1,5)
     j=1
     while True and j<=2:
          x, y, z = sense.get_accelerometer_raw().values()
@@ -164,22 +163,49 @@ while k<3:
          
          if x > 1.1 or y > 1.1 or z > 1.1:
              if j%2==1 :
-                s=choose_symbolplayer1()
+                s=choose_symbolplayer1(r)
                 time.sleep(1)
                 sense.clear()
             
              elif j%2==0:
-                ss=choose_symbolplayer2()
+                ss=choose_symbolplayer2(r2)
                 time.sleep(1)
                 sense.clear()
              j=j+1
 
-#    if s % 5 == ss:
-#       sense.show_message("Second player wins!")
-#    elif (s + 1) % 5 == ss:
-#       sense.show_message("Second player wins!")
-    if s == ss:
-        sense.show_message("Players tie!")
+    equal = 0
+    first = 0
+    second = 0
+
+    if r == r2:
+        equal = equal + 1
+    elif (r == 1) and ((r2 == 5) or (r2 == 4)):
+        first = first + 1
+    elif (r == 2) and ((r2 == 1) or (r2 == 5)):
+        first = first + 1
+    elif (r == 3) and ((r2 == 5) or (r2 == 2)):
+        first = first + 1
+    elif (r == 4) and (r2 == 3):
+        first = first + 1
+    elif (r == 5) and ((r2 == 4) or (r2 == 3)):
+        first = first + 1
     else:
-        sense.show_message("First player wins!")     
+        second = second + 1
+        
+    
+        
     k=k+1
+if first > second:
+    sense.show_message("1.won")
+elif first < second:
+    sense.show_message("2.won")
+elif first==2 and equal==1:
+    sense.show_message("1.won")
+elif second==2 and equal==1:
+    sense.show_message("2.won")
+elif first ==1 and equal==2:
+    sense.show_message("1.won")
+elif second ==1 and equal==2:
+    sense.show_message("2.won")
+else:
+    sense.show_message("=")
