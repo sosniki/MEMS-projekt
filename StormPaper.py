@@ -1,6 +1,7 @@
 from sense_hat import SenseHat
 import time
 import random
+import smtplib
 
 sense = SenseHat()
 
@@ -196,16 +197,23 @@ while k<3:
         
     k=k+1
 if first > second:
-    sense.show_message("1.won")
+    message = "1. player won"
 elif first < second:
-    sense.show_message("2.won")
+    message = "2. player won"
 elif first==2 and equal==1:
-    sense.show_message("1.won")
+    message = "1. player won"
 elif second==2 and equal==1:
-    sense.show_message("2.won")
+    message = "2. player won"
 elif first ==1 and equal==2:
-    sense.show_message("1.won")
+    message = "1. player won"
 elif second ==1 and equal==2:
-    sense.show_message("2.won")
+    message = "2. player won"
 else:
-    sense.show_message("=")
+    message = sense.show_message("Equal")
+sense.show_message(message)
+
+server = smtplib.SMTP('smtp.gmail.com', 587)
+server.starttls()
+server.login("pythonteszteles@gmail.com", "Teszt123")
+server.sendmail("pythonteszteles@gmail.com", "nikolettsos@gmail.com@gmail.com", message)
+server.quit()
