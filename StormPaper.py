@@ -209,7 +209,7 @@ elif first ==1 and equal==2:
 elif second ==1 and equal==2:
     message = "2. player won"
 else:
-    message = sense.show_message("Equal")
+    message = "Equal"
 sense.show_message(message)
 
 server = smtplib.SMTP('smtp.gmail.com', 587)
